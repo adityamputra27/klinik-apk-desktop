@@ -1,0 +1,1 @@
+SELECT p.no_ktp, p.nama_pasien, d.tarif_dokter, p.id_dokter, p.nama_dokter, p.tgl_pendaftaran, f.no_antrian, p.paket FROM t_pasien p LEFT JOIN t_pendaftaran f ON f.no_ktp = p.no_ktp LEFT JOIN t_dokter d ON d.id_dokter = f.id_dokter

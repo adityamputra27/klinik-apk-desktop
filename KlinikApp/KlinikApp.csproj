@@ -1,0 +1,303 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{9D14E32E-A819-472F-BF03-90CC87357D5E}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>KlinikApp</RootNamespace>
+    <AssemblyName>KlinikApp</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>C:\ProjectC#\KlinikApp\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>true</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <UpdateUrl>http://localhost/KlinikApp/</UpdateUrl>
+    <AutorunEnabled>true</AutorunEnabled>
+    <ApplicationRevision>2</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>D723FBA84DFAA9AF2032B76E18C3C35AEA40B02B</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>KlinikApp_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>true</SignManifests>
+  </PropertyGroup>
+  <PropertyGroup />
+  <ItemGroup>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="Microsoft.VisualBasic.PowerPacks.Vs, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="MySql.Data, Version=8.0.17.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\MySql.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CircularButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="DGVPrinter.cs" />
+    <Compile Include="FORM_LAPORAN.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORM_LAPORAN.Designer.cs">
+      <DependentUpon>FORM_LAPORAN.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORM_ADMINISTRASI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORM_ADMINISTRASI.Designer.cs">
+      <DependentUpon>FORM_ADMINISTRASI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORM_ADMIN_DOKTER.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORM_ADMIN_DOKTER.Designer.cs">
+      <DependentUpon>FORM_ADMIN_DOKTER.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORM_CARI_DOKTER.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORM_CARI_DOKTER.Designer.cs">
+      <DependentUpon>FORM_CARI_DOKTER.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORM_CARI_OBAT.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORM_CARI_OBAT.Designer.cs">
+      <DependentUpon>FORM_CARI_OBAT.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORM_MASTER_DOKTER.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORM_MASTER_DOKTER.Designer.cs">
+      <DependentUpon>FORM_MASTER_DOKTER.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORM_MASTER_OBAT.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORM_MASTER_OBAT.Designer.cs">
+      <DependentUpon>FORM_MASTER_OBAT.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORM_MASTER_PASIEN.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORM_MASTER_PASIEN.Designer.cs">
+      <DependentUpon>FORM_MASTER_PASIEN.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORM_ADMIN.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORM_ADMIN.Designer.cs">
+      <DependentUpon>FORM_ADMIN.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORM_LOGIN.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORM_LOGIN.Designer.cs">
+      <DependentUpon>FORM_LOGIN.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORM_MASTER_PEGAWAI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORM_MASTER_PEGAWAI.Designer.cs">
+      <DependentUpon>FORM_MASTER_PEGAWAI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORM_PEMERIKSAAN.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORM_PEMERIKSAAN.Designer.cs">
+      <DependentUpon>FORM_PEMERIKSAAN.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORM_PENDAFTARAN.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORM_PENDAFTARAN.Designer.cs">
+      <DependentUpon>FORM_PENDAFTARAN.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORM_REGISTER_ACCOUNT.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORM_REGISTER_ACCOUNT.Designer.cs">
+      <DependentUpon>FORM_REGISTER_ACCOUNT.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORM_RESEP.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORM_RESEP.Designer.cs">
+      <DependentUpon>FORM_RESEP.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORM_SETTINGS.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORM_SETTINGS.Designer.cs">
+      <DependentUpon>FORM_SETTINGS.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GradientPanel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="GV.cs" />
+    <Compile Include="MysqlComponent.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="CircularButton.resx">
+      <DependentUpon>CircularButton.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORM_LAPORAN.resx">
+      <DependentUpon>FORM_LAPORAN.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORM_ADMINISTRASI.resx">
+      <DependentUpon>FORM_ADMINISTRASI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORM_ADMIN_DOKTER.resx">
+      <DependentUpon>FORM_ADMIN_DOKTER.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORM_CARI_DOKTER.resx">
+      <DependentUpon>FORM_CARI_DOKTER.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORM_CARI_OBAT.resx">
+      <DependentUpon>FORM_CARI_OBAT.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORM_MASTER_DOKTER.resx">
+      <DependentUpon>FORM_MASTER_DOKTER.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORM_MASTER_OBAT.resx">
+      <DependentUpon>FORM_MASTER_OBAT.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORM_MASTER_PASIEN.resx">
+      <DependentUpon>FORM_MASTER_PASIEN.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORM_ADMIN.resx">
+      <DependentUpon>FORM_ADMIN.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORM_LOGIN.resx">
+      <DependentUpon>FORM_LOGIN.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORM_MASTER_PEGAWAI.resx">
+      <DependentUpon>FORM_MASTER_PEGAWAI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORM_PEMERIKSAAN.resx">
+      <DependentUpon>FORM_PEMERIKSAAN.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORM_PENDAFTARAN.resx">
+      <DependentUpon>FORM_PENDAFTARAN.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORM_REGISTER_ACCOUNT.resx">
+      <DependentUpon>FORM_REGISTER_ACCOUNT.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORM_RESEP.resx">
+      <DependentUpon>FORM_RESEP.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORM_SETTINGS.resx">
+      <DependentUpon>FORM_SETTINGS.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\KopSurat.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\KopSurat2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\KopSurat3.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\KopSurat4.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.5">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.5 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

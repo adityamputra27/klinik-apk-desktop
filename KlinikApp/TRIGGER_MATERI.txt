@@ -1,0 +1,27 @@
+A. TRIGGER INSERT
+
+CREATE TRIGGER user_pelanggan 
+AFTER  INSERT ON tb_pelanggan
+FOR EACH ROW
+BEGIN 
+	INSERT INTO tb_user (username, password, hak_akses) VALUES (NEW.nama_pelanggan, NEW.id_pelanggan, "member");
+END//
+
+B. TRIGGER UPDATE
+
+CREATE TRIGGER UPDATE_USER
+AFTER INSERT ON tb_pelanggan
+FOR EACH ROW
+BEGIN 
+                UPDATE tb_user SET username = NEW.nama_pelanggaN
+                WHERE password = NEW.id_pelanggan
+END//
+
+C. TRIGGER DELETE 
+
+CREATE TRIGGER HAPUS_USER
+BEFORE DELETE ON tb_pelanggan
+FOR EACH ROW
+BEGIN
+               DELETE FROM t_user WHERE password = OLD.id_pelanggan
+END//

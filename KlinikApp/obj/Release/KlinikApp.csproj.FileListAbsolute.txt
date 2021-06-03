@@ -1,0 +1,1 @@
+C:\ProjectC#\KlinikApp\KlinikApp\bin\Release\KlinikApp.exe.config
